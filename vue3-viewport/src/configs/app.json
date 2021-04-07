@@ -1,0 +1,33 @@
+{
+  "navBar": {
+    "show": true,
+    "title": "默认标题",
+    "leftText": "",
+    "leftArrow": true,
+    "rightText": "",
+    "rightIcon": "",
+    "border": true,
+    "safeAreaInsetTop": false
+  },
+  "tabBar": {
+    "show": true,
+    "border": true,
+    "activeColor": "#1989fa",
+    "inactiveColor": "#7d7e80",
+    "safeAreaInsetBottom": false,
+    "list": [
+      {
+        "key": "HOME",
+        "title": "主页",
+        "icon": "home-o",
+        "path": "/home"
+      },
+      {
+        "key": "ABOUT",
+        "title": "我的",
+        "icon": "setting-o",
+        "path": "/about"
+      }
+    ]
+  }
+}

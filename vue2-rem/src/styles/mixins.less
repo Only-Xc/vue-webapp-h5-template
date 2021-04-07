@@ -1,0 +1,52 @@
+@import './var.less';
+
+// 单行省略
+.ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行省略
+.multi-ellipsis(@lines) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @lines;
+
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+}
+
+// 1px 边框
+@allDir: top, right, bottom, left;
+.hairline(@dir: @allDir, @radius: 0, @width: @border-width-base, @color: @border-color) {
+  position: relative;
+
+  &::after {
+    z-index: 9;
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 0 solid @color;
+    .forOutputBorderWidth(@dir, @width);
+    border-radius: @radius * 2;
+    transform: scale(0.5);
+  }
+}
+
+.forOutputBorderWidth(@list, @width) {
+  .loop(@i:1) when (@i =< length(@list)) {
+    @value: extract(@list, @i);
+    border-@{value}-width: @width;
+    .loop(@i + 1);
+  }
+  .loop();
+}
+
+

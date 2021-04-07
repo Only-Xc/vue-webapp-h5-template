@@ -1,0 +1,40 @@
+/* eslint-disable comma-dangle */
+export interface TABBAR_INTERFACE {
+  SET_SHOW: string;
+  SET_SHOW_DOT: string;
+  SET_BADGE: string;
+  SET_NEW_LIST: string;
+  [key: string]: string;
+}
+
+export interface NAVBAR_INTERFACE {
+  SET_SHOW: string;
+  SET_TITLE: string;
+  SET_LEFT_TEXT: string;
+  SET_SHOW_LEFT_ARROW: string;
+  SET_RIGHT_TEXT: string;
+  SET_RIGHT_ICON: string;
+  RESET_CONFIG: string;
+  ON_LEFT_CLICK: string;
+  ON_RIGHT_CLICK: string;
+  [key: string]: string;
+}
+
+export const TABBAR: TABBAR_INTERFACE = {
+  SET_SHOW: 'SET_SHOW_TABBAR',
+  SET_SHOW_DOT: 'SET_SHOW_TABBAR_DOT',
+  SET_BADGE: 'SET_TABBAR_BADGE',
+  SET_NEW_LIST: 'SET_TABBAR_NEW_LIST',
+}
+
+export const NAVBAR: NAVBAR_INTERFACE = {
+  SET_SHOW: 'SET_HOW_NAVBAR',
+  SET_TITLE: 'SET_NAVBAR_TITLE',
+  SET_LEFT_TEXT: 'SET_NAVBAR_LEFT_TEXT',
+  SET_SHOW_LEFT_ARROW: 'SET_SHOW_NAVBAR_LEFT_ARROW',
+  SET_RIGHT_TEXT: 'SET_NAVBAR_RIGHT_TEXT',
+  SET_RIGHT_ICON: 'SET_NAVBAR_RIGHT_ICON',
+  RESET_CONFIG: 'SET_RESET_NAVBAR_CONFIG',
+  ON_LEFT_CLICK: 'ON_NAVBAR_LEFT_CLICK',
+  ON_RIGHT_CLICK: 'ON_NAVBAR_RIGHT_CLICK',
+}

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular,
+    Hiragino Sans GB, Microsoft Yahei, sans-serif;
+}
+
+body *,
+body :after,
+body :before {
+  box-sizing: border-box;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+a {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div[contenteditable="true"],
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]),
+select,
+textarea {
+  -webkit-appearance: none;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+
+div[contenteditable="true"]:focus,
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
